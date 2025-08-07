@@ -25,6 +25,6 @@ for i in range(size):
         index = i * size + j
         img.putpixel((j, i), ((int(chunks[index][0])*255), (int(chunks[index][1])*255), (int(chunks[index][2])*255)))
 # Output
-img = img.resize((256, 256), Image.NEAREST)  # Resize to 256x256 using nearest neighbor
+img = img.resize((size * 86, size * 86), Image.NEAREST)  # Resize to 256x256 using nearest neighbor
 img.save('output.png')
 print("Image saved as output.png")

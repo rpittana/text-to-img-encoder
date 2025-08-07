@@ -4,7 +4,7 @@ from PIL import Image
 print("Enter name of the image file to decode")
 input_file = input()
 img = Image.open(input_file)
-
+img = img.resize((img.width // 86, img.height // 86), Image.NEAREST)  # Resize to original size
 # Extract binary data from the image
 data = ''
 pixels = list(img.getdata())
